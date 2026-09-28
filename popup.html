@@ -1,0 +1,94 @@
+<!doctype html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GeoSpoof Pro</title>
+  <link rel="stylesheet" href="popup.css">
+  <style>
+    .mode-row{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px}
+    .mode-btn{margin:0!important;background:#edf2f6!important;color:#33404a!important;padding:8px!important}
+    .mode-btn.active{background:#1677ff!important;color:#fff!important}
+    .manual-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .manual-box{display:block}
+    .manual-box label{margin-top:0}
+    .section-title{font-size:11px;font-weight:700;margin:0 0 6px}
+  </style>
+</head>
+<body>
+<main class="app">
+  <header>
+    <div class="logo">📍</div>
+    <div>
+      <h1>GeoSpoof Pro</h1>
+      <p>Paste or enter coordinates</p>
+    </div>
+  </header>
+
+  <section class="card">
+    <div class="section-title">Coordinates</div>
+
+    <div class="mode-row">
+      <button id="pasteMode" class="mode-btn active" type="button">Paste Pair</button>
+      <button id="manualMode" class="mode-btn" type="button">Manual Entry</button>
+    </div>
+
+    <div id="pastePanel">
+      <label for="coords">Paste Latitude, Longitude</label>
+      <textarea id="coords" rows="2" spellcheck="false" placeholder="24.251720753005618, 79.3964269953607"></textarea>
+    </div>
+
+    <div id="manualPanel" hidden="">
+      <div class="manual-grid">
+        <div class="manual-box">
+          <label for="manualLat">Latitude</label>
+          <input id="manualLat" type="number" step="any" placeholder="24.251720753005618">
+        </div>
+        <div class="manual-box">
+          <label for="manualLon">Longitude</label>
+          <input id="manualLon" type="number" step="any" placeholder="79.3964269953607">
+        </div>
+      </div>
+    </div>
+
+    <div id="preview" class="preview">Waiting for coordinates…</div>
+
+    <label for="shopName">Location / Shop Name <span>(optional)</span></label>
+    <input id="shopName" type="text" maxlength="60" placeholder="e.g. Ahmedabad Shop">
+
+    <div class="minirow">
+      <label class="accuracy-label" for="acc">Accuracy (m)</label>
+      <input id="acc" type="number" min="0.1" step="0.1" value="10">
+    </div>
+
+    <button id="apply" class="primary" type="button">📍 Apply to Active Tab</button>
+
+    <div class="button-row">
+      <button id="save" class="save" type="button">💾 Save</button>
+      <button id="clear" class="secondary" type="button">Clear</button>
+    </div>
+
+    <div id="status">Ready</div>
+  </section>
+
+  <section class="card shops-card">
+    <div class="shops-head">
+      <div>
+        <h2>My Shops</h2>
+        <p id="shopCount">0 saved locations</p>
+      </div>
+    </div>
+    <div id="shopList" class="shop-list"></div>
+  </section>
+
+  <p class="note">
+    Paste a coordinate pair or switch to <b>Manual Entry</b> and enter
+    latitude and longitude separately.
+  </p>
+<p class="note">
+    This is Created by <b>YUVRAJSINH S. THAKOR</b> for educational purpose only.
+  </p>
+</main>
+
+<script src="popup.js"></script>
+
+</body></html>
