@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "GeoSpoof Pro - Custom Geolocation",
+  "version": "2.1.0",
+  "description": "Native Chrome geolocation override for testing location-aware websites.",
+  "permissions": ["debugger", "storage", "tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "GeoSpoof Pro"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

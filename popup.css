@@ -1,0 +1,19 @@
+*{box-sizing:border-box}
+body{margin:0;width:350px;font-family:Arial,sans-serif;background:#f4f6f8;color:#18212b}
+.app{padding:16px}
+header{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+.logo{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#1677ff;color:white;font-size:28px}
+h1{font-size:18px;margin:0}
+header p{font-size:12px;color:#68727d;margin:3px 0}
+.card,.presets{background:white;border-radius:12px;padding:15px;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+label{display:block;margin:9px 0 5px;font-size:12px;font-weight:bold}
+input{width:100%;padding:10px;border:1px solid #cbd2d9;border-radius:7px;font-size:14px}
+button{width:100%;border:0;border-radius:8px;padding:11px;margin-top:12px;background:#1677ff;color:#fff;font-weight:bold;cursor:pointer}
+button:hover{filter:brightness(.92)}
+.secondary{background:#5f6872}
+#status{margin-top:11px;padding:8px;border-radius:7px;text-align:center;font-size:12px;background:#eef2f5}
+#status.ok{background:#e8f5e9;color:#216b2a}
+#status.error{background:#ffebee;color:#b42318}
+.presets{margin-top:12px}
+.preset{width:48%;display:inline-block;margin-right:1%;background:#eef3f8;color:#24313d;padding:8px;font-size:12px}
+.note{font-size:11px;color:#69747e;line-height:1.4;margin:12px 2px}
